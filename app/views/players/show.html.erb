@@ -1,0 +1,21 @@
+<h1>View stats for <%= @player.first_name %> <%= @player.last_name %></h1>
+<table>
+	
+	<thead>
+		<tr>
+			<th>Season</th>
+			<th>Goals</th>
+			<th>Assists</th>
+		</tr>
+	</thead>
+	<tbody>
+		
+		<tr>
+			<td><%= @player.season %></td>
+			<td><%= @player.goals %></td>
+			<td><%= @player.assists %></td>
+		</tr>
+		
+	</tbody>
+</table>
+<a href="/players">View Other Players</a>
