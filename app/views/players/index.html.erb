@@ -1,4 +1,6 @@
+
 <h1>View <%= pluralize(@players.count, "Player") %></h1>
+
 <table class="table table-striped">
 	
 	<thead>
@@ -12,12 +14,12 @@
 		<tr>
 			<td><%= player.first_name %></td>
 			<td><%= player.last_name %></td>
-			<td><a href="/players/<%= player.id %>">Show</a> |
-				<a href="/players/<%= player.id %>/edit">Edit</a> |
-				<a href="/players/<%= player.id %>" data-method="delete" data-confirm="Are you sure?">Delete</a>
+			<td><a class="btn btn-primary" href="/players/<%= player.id %>">Show</a>
+				<a class="btn btn-primary" href="/players/<%= player.id %>/edit">Edit</a>
+				<a class="btn btn-primary" href="/players/<%= player.id %>" data-method="delete" data-confirm="Are you sure?">Delete</a>
 			</td>
 		</tr>
 		<% end %>
 	</tbody>
 </table>
-<a href="/players/new">Create Players</a>
+<a class="btn btn-primary" href="/players/new">Create Players</a>

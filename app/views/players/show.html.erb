@@ -1,11 +1,11 @@
 <h1>View stats for <%= @player.first_name %> <%= @player.last_name %></h1>
-<table>
+<table class="table table-striped">
 	
 	<thead>
 		<tr>
-			<th>Season</th>
-			<th>Goals</th>
-			<th>Assists</th>
+			<th scope="col">Season</th>
+			<th scope="col">Goals</th>
+			<th scope="col">Assists</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -18,4 +18,4 @@
 		
 	</tbody>
 </table>
-<a href="/players">View Other Players</a>
+<a class="btn btn-primary" href="/players" role="button">View Other Players</a>
