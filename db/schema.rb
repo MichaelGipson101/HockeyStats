@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201019222448) do
+ActiveRecord::Schema.define(version: 20201116221634) do
+
+  create_table "appearances", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "season_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_appearances_on_player_id"
+    t.index ["season_id"], name: "index_appearances_on_season_id"
+  end
 
   create_table "players", force: :cascade do |t|
     t.string "first_name"
@@ -18,6 +27,12 @@ ActiveRecord::Schema.define(version: 20201019222448) do
     t.integer "season"
     t.integer "goals"
     t.integer "assists"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "seasons", force: :cascade do |t|
+    t.integer "season"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
