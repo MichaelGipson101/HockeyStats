@@ -12,7 +12,6 @@ Rails.application.routes.draw do
 	get "seasons/:id/edit" => "seasons#edit"
   	patch "seasons/:id" => "seasons#update"
   	get "seasons/:id" => "seasons#show"
-  	get "appearances" => "appearances#index"
-  	post "appearances" => "appearances#create"
+  	get "appearances/search" => "appearances#search", :as => 'search_page'
   	
 end

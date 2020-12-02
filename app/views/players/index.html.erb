@@ -7,6 +7,7 @@
 		<tr>
 			<th scope="col">First Name</th>
 			<th scope="col">Last Name</th>
+			<th scope="col">Season</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -14,6 +15,7 @@
 		<tr>
 			<td><%= player.first_name %></td>
 			<td><%= player.last_name %></td>
+			<td><%= player.season %></td>
 			<td><a class="btn btn-danger" href="/players/<%= player.id %>">Show</a>
 				<a class="btn btn-danger" href="/players/<%= player.id %>/edit">Edit</a>
 				<a class="btn btn-danger" href="/players/<%= player.id %>" data-method="delete" data-confirm="Are you sure?">Delete</a>

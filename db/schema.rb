@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201116221634) do
+ActiveRecord::Schema.define(version: 20201202224545) do
 
   create_table "appearances", force: :cascade do |t|
     t.integer "player_id"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20201116221634) do
     t.integer "assists"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "fnln"
   end
 
   create_table "seasons", force: :cascade do |t|
