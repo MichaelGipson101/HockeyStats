@@ -10,14 +10,14 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @seasons.each do |season| %>
+		
 		<tr>
-			<td><%= season.season %></td>
+			<td><%= @players.season %></td>
 			<td><%= @players.goals %></td>
 			<td><%= @players.assists %></td>
 			<td><%= @players.goals + @players.assists %></td>
 		</tr>
-		<% end %>
+		
 	</tbody>
 </table>
 <a class="btn btn-danger" href="/players" role="button">View Other Players</a>

@@ -1,11 +1,11 @@
 <h1>Add Season</h1>
 <form action="/seasons" method="post">
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-	<p>
-		<label>Year</label>
-		<input type="text" name="season[season]">
-	</p>
-	<input type="submit" value="create">
+	<div class="form-group">		
+		<label>Year:</label>
+		<input type="text" name="season[season]" class="form-control">
+	</div>
+	<input type="submit" class="btn btn-danger" value="Create">
 </form>
 <% if flash[:errors] %>
 	<% flash[:errors].each do |e| %>
