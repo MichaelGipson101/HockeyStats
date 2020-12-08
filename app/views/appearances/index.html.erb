@@ -6,7 +6,7 @@
 		<select name="appearance[player_id]" id="player_id">
 			<% @players.each do |player| %>
 			<option value="<%= player.id %>">
-				<%= player.fnln %> <%= player.season %>
+				<%= player.fnln %> - <%= player.season %>
 			</option>
 			<% end %>
 		</select>
